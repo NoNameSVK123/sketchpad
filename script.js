@@ -20,7 +20,7 @@ function createGrid(res){
 }
 
 function fillDiv(e){
-    const target = e.target;
+    const target = e.target;``
     target.style.backgroundColor = "black";
 }
 
