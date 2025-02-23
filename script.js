@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const button = document.querySelector(".button");
 
 function createDiv(size){
     const div = document.createElement("div");
@@ -28,4 +29,29 @@ function clearDiv(e){
     const target = e.target;
     target.style.backgroundColor = "white";
 }
+
+function cleanGrid(size) {
+    container.innerHTML = ``;
+    createGrid(size);
+}
+
+function changeSize(){
+    const size = Number(prompt("Number of squares:")?console.log("yes"):console.log("no"));
+    
+    if (size<=100 && size>=0){
+        console.log(size);
+        cleanGrid(size);
+    }
+}
+
+button.addEventListener("click",() => {
+    let clean = true;
+    const size = prompt("Number of squares:");
+    size=="" || size==null?clean=false:Number(size);
+
+    if (clean && size<=100 && size>=0) {
+        cleanGrid(size);
+    }
+});
+
 createGrid(16);
