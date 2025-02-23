@@ -20,9 +20,12 @@ function createGrid(res){
     }
 }
 
+
 function fillDiv(e){
     const target = e.target;``
-    target.style.backgroundColor = "black";
+    const colors = ["red","orange","yellow","green","blue","purple"];
+    const randomColor = colors[Math.floor(Math.random()*colors.length)];
+    target.style.backgroundColor = randomColor;
 }
 
 function clearDiv(e){
